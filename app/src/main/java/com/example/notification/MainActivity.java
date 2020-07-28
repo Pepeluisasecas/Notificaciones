@@ -55,15 +55,16 @@ public class MainActivity extends AppCompatActivity {
         notificationManager.createNotificationChannel(notificationChannel);
 
 
-        CharSequence textTitle = "Anónimo";
-        CharSequence textContent = "Sufriendo del triunfo";
+        CharSequence textTitle = "Su reserva está a punto de empezar";
+        CharSequence textContent = "Pulse aqui para revisar la informacion";
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, id)
                 .setSmallIcon(R.drawable.notification_icon)
                 .setColor(500058)
                 .setContentTitle(textTitle)
                 .setContentText(textContent)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                .setContentIntent(notifyPendingIntend);
+                .setContentIntent(notifyPendingIntend)
+                .setAutoCancel(true);
 
 
 
